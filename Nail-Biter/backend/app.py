@@ -6,7 +6,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
-model = load_model("nail_biter_model.h5")  # Make sure to add your trained model here
+model = load_model("nail_biter_model.h5")  # Make sure this file is in backend folder
 
 def preprocess_image(image):
     image = image.resize((224, 224))
@@ -17,9 +17,8 @@ def preprocess_image(image):
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
-    img_data = data['image']  # Expecting base64 encoded string
+    img_data = data['image']
 
-    # Remove header like 'data:image/png;base64,' if present
     if "," in img_data:
         img_data = img_data.split(",")[1]
 
