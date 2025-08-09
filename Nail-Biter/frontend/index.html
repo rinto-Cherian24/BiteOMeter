@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite-O-Meter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="form-wrapper">
+                <h1>Hungry? Have a NailSnack 🍩💅</h1>
+                <p class="subtitle">Measure your nail bite score in seconds!</p>
+
+                <form id="nailForm">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="image">Upload Hand Images</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+
+                    <div class="buttons">
+                        <button type="submit" id="submitBtn" class="btn primary">Submit</button>
+                        <button type="reset" id="resetBtn" class="btn secondary">Reset</button>
+                    </div>
+                </form>
+
+                <!-- Simpsons animation -->
+                <div class="simpson-animation" id="simpson-animation">
+                    <img src="images/homer-biting-nails.png" alt="Homer Simpson Biting Nails">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <img src="images/img.png" alt="Homer Biting Nails" class="side-image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

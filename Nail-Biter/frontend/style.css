@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+/* Simpson Color Palette */
+:root {
+    --simpson-yellow: #FFD90F;
+    --simpson-blue: #4A90E2;
+    --simpson-orange: #FF8C42;
+    --simpson-purple: #8E44AD;
+    --simpson-green: #2ECC71;
+    --simpson-red: #E74C3C;
+    --simpson-dark: #2C3E50;
+    --simpson-light: #F8F9FA;
+    --simpson-shadow: rgba(255, 217, 15, 0.3);
+    --gradient-primary: linear-gradient(135deg, #FFD90F 0%, #FF8C42 100%);
+    --gradient-secondary: linear-gradient(135deg, #4A90E2 0%, #8E44AD 100%);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    min-height: 600px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 217, 15, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    background: #ffffff;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    border: 3px solid var(--simpson-yellow);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Rainbow stripe at top */
+.form-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, 
+        var(--simpson-yellow) 0%,
+        var(--simpson-orange) 20%,
+        var(--simpson-red) 40%,
+        var(--simpson-purple) 60%,
+        var(--simpson-blue) 80%,
+        var(--simpson-green) 100%
+    );
+    animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Typography */
+h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--simpson-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+h1::before {
+    content: '🍩';
+    font-size: 1.6rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: var(--simpson-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--simpson-dark);
+    background: #ffffff;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    border-color: var(--simpson-yellow);
+    box-shadow: 0 0 0 4px rgba(255, 217, 15, 0.15);
+    transform: translateY(-1px);
+}
+
+input[type="text"]::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* File Input Styling */
+input[type="file"] {
+    border-style: dashed;
+    border-color: var(--simpson-orange);
+    text-align: center;
+    padding: 1.8rem 1.2rem;
+    background: #fafbfc;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    background: #f1f3f4;
+    border-color: var(--simpson-red);
+}
+
+/* Professional Button Container */
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    align-items: stretch;
+}
+
+.btn {
+    padding: 0.95rem 1.5rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary Button (Submit) */
+.btn.primary {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: var(--simpson-orange);
+    font-size: 1rem;
+    font-weight: 800;
+    min-height: 56px;
+}
+
+.btn.primary:hover {
+    background: linear-gradient(135deg, #FF8C42 0%, #FFD90F 100%);
+    border-color: var(--simpson-red);
+    box-shadow: 0 10px 30px rgba(255, 140, 66, 0.4);
+}
+
+/* Secondary Button (Reset) */
+.btn.secondary {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: var(--simpson-dark);
+    border-color: #dee2e6;
+}
+
+.btn.secondary:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    border-color: var(--simpson-blue);
+    color: var(--simpson-blue);
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #87CEEB;
+    overflow: hidden;
+    position: relative;
+}
+
+.side-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Simpson Animation Elements */
+.simpson-animation {
+    display: none;
+    margin-top: 1.5rem;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.simpson-animation img {
+    max-width: 200px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    animation: wiggle 1s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+/* Floating Elements */
+.floating-donuts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.donut {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: floatUp 8s linear infinite;
+}
+
+.donut:nth-child(1) { left: 10%; animation-delay: 0s; }
+.donut:nth-child(2) { left: 20%; animation-delay: 2s; }
+.donut:nth-child(3) { left: 80%; animation-delay: 4s; }
+.donut:nth-child(4) { left: 90%; animation-delay: 6s; }
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        flex-direction: column;
+        max-width: 500px;
+        min-height: auto;
+    }
+    
+    .right-section {
+        height: 250px;
+    }
+    
+    .form-wrapper {
+        padding: 2rem 1.5rem;
+        margin: 0;
+        max-width: none;
+    }
+    
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        border-radius: 15px;
+    }
+    
+    .form-wrapper {
+        padding: 1.5rem 1.2rem;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    input[type="text"],
+    input[type="file"] {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+        min-height: 45px;
+    }
+    
+    .btn.primary {
+        min-height: 50px;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 217, 15, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--simpson-yellow);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success/Error States */
+.success {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-color: var(--simpson-green);
+    color: var(--simpson-green);
+}
+
+.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-color: var(--simpson-red);
+    color: var(--simpson-red);
+}
+
+/* Result Display Styles */
+.result-display {
+    margin-top: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.result-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 3px solid;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.result-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    animation: rainbow 3s linear infinite;
+}
+
+.bite-result {
+    border-color: var(--simpson-orange);
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+}
+
+.bite-result::before {
+    background: linear-gradient(90deg, 
+        var(--simpson-orange) 0%,
+        var(--simpson-red) 50%,
+        var(--simpson-purple) 100%
+    );
+}
+
+.nobite-result {
+    border-color: var(--simpson-green);
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+}
+
+.nobite-result::before {
+    background: linear-gradient(90deg, 
+        var(--simpson-green) 0%,
+        var(--simpson-blue) 50%,
+        var(--simpson-purple) 100%
+    );
+}
+
+.result-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--simpson-dark);
+    line-height: 1.3;
+}
+
+.prediction {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prediction .label {
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bite-result .prediction .label {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 8px 25px rgba(255, 140, 66, 0.4);
+}
+
+.nobite-result .prediction .label {
+    background: var(--gradient-secondary);
+    color: white;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+}
+
+.prediction .confidence {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--simpson-dark);
+    opacity: 0.8;
+}
+
+.result-card .message {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    line-height: 1.4;
+    color: var(--simpson-dark);
+}
+
+.bite-result .message {
+    color: var(--simpson-orange);
+}
+
+.nobite-result .message {
+    color: var(--simpson-green);
+}
+
+.health-info {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--simpson-dark);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Responsive adjustments for result display */
+@media (max-width: 600px) {
+    .result-card {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .result-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .prediction .label {
+        font-size: 1.5rem;
+        padding: 0.4rem 1.2rem;
+    }
+    
+    .result-card .message {
+        font-size: 1rem;
+    }
+}
+
+/* Error Display Styles */
+.error-display {
+    margin-top: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.error-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--simpson-red);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%);
+}
+
+.error-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, 
+        var(--simpson-red) 0%,
+        var(--simpson-orange) 50%,
+        var(--simpson-red) 100%
+    );
+    animation: rainbow 3s linear infinite;
+}
+
+.error-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--simpson-red);
+    line-height: 1.3;
+}
+
+.error-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--simpson-dark);
+    line-height: 1.4;
+}
+
+.error-card p:last-child {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments for error display */
+@media (max-width: 600px) {
+    .error-card {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .error-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .error-card p {
+        font-size: 0.9rem;
+    }
+}
