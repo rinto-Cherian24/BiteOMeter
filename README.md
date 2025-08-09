@@ -1,3 +1,5 @@
+<img width="3188" height="1202" alt="frame (3)" src="https://github.com/rinto-Cherian24/BiteOMeter/blob/main/Nail-Biter/images/useless123.png" />
+
 # BiteOMeter 🎯
 
 ## Basic Details
