@@ -46,7 +46,7 @@ We built an AI + OpenCV based tool that analyses a photo of your hand, detects t
 ---
 
 ### Workflow Diagram
-![Workflow](screenshots/workflow_diagram.jpg)
+![Workflow](https://github.com/rinto-Cherian24/BiteOMeter/blob/main/Nail-Biter/images/workflow.png)
 
 ---
 
