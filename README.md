@@ -26,17 +26,34 @@ We built an AI + OpenCV based tool that analyses a photo of your hand, detects t
 **For Software:**
 - **Languages:** Python  
 - **Libraries:** OpenCV, NumPy, Matplotlib  
-- **Tools:** Jupyter Notebook, GitHub  
-
-**For Hardware:**
-- Just your trusty laptop and maybe a webcam/phone camera.
+- **Tools:** Flask, GitHub  
 
 ---
 
-### Implementation
+## Project Documentation
 
-**Installation**
-```bash
-git clone https://github.com/rinto-Cherian24/BiteOMeter.git
-cd Nail-Biter
-pip install -r requirements.txt
+### Screenshots
+
+#### 1️⃣ Upload Interface
+![Upload Interface](https://github.com/rinto-Cherian24/BiteOMeter/blob/main/Nail-Biter/images/Screenshot%202025-08-09%20060615.png)
+
+#### 2️⃣ Detection in Progress
+![Detection Process](https://github.com/rinto-Cherian24/BiteOMeter/blob/main/Nail-Biter/images/Screenshot%202025-08-09%20061424.png)
+
+#### 3️⃣ Result Display
+![Result](https://github.com/rinto-Cherian24/BiteOMeter/blob/main/Nail-Biter/images/Screenshot%202025-08-09%20061345.png)
+
+---
+
+### Workflow Diagram
+![Workflow](screenshots/workflow_diagram.jpg)
+
+---
+
+## Team Contributions
+- **Rinto Cherian:** Image processing, AI logic, testing.  
+- **Athul Krishna:** Project design, UI layout, documentation.  
+
+---
+
+Made with ❤️ at TinkerHub Useless Projects  
