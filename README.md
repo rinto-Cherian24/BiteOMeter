@@ -30,6 +30,18 @@ We built an AI + OpenCV based tool that analyses a photo of your hand, detects t
 
 ---
 
+### Implementation
+For Software:
+# Installation
+1.Clone this reposiotory into your Code editor.
+2.cd backend
+3.Activate the virtual environment(venv).
+
+# Run
+python app.py
+Then, open the webpage and Homer Simpson will judge your nails.
+---
+
 ## Project Documentation
 
 ### Screenshots
