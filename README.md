@@ -38,8 +38,8 @@ For Software:
 - 3.Activate the virtual environment(venv).
 
 # Run
-python app.py
-Then, open the webpage and Homer Simpson will judge your nails.
+- python app.py
+- Then, open the webpage and Homer Simpson will judge your nails.
 ---
 
 ## Project Documentation
