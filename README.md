@@ -44,6 +44,12 @@ We built an AI + OpenCV based tool that analyses a photo of your hand, detects t
 ![Result](https://github.com/rinto-Cherian24/BiteOMeter/blob/main/Nail-Biter/images/Screenshot%202025-08-09%20061345.png)
 
 ---
+### Project Demo
+# Video
+https://drive.google.com/file/d/1UCX662AiMLtEylYk5IYnIi0_nKHQ6Gd7/view?usp=drive_link
+In the video demo uploaded here, the backend part i.e., the Python virtual environment is set up(venv) and then the app.py is run which starts running the model and it becomes active. The backend part being set up, the frontend part index.html is opened externally. On opening the webpage the user has options to enter his/her name and upload his/her hand image for the nail-judgement. On submitting the user receives the final judgement of biting off their nails or keep them for further growth.
+
+---
 
 ### Workflow Diagram
 ![Workflow](https://github.com/rinto-Cherian24/BiteOMeter/blob/main/Nail-Biter/images/workflow.png)
